@@ -1,5 +1,6 @@
 "use client"
 import { UserButton } from '@clerk/nextjs'
+import Image from 'next/image';
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
@@ -7,7 +8,7 @@ export default function Header() {
     const path=usePathname();
   return (
     <div className='flex p-4 items-center justify-between bg-secondary shadow-sm'>
-        {/* <Image src="/logo.svg" width={160} height={100} alt='logo' /> */}
+         <Image src="/logo2.png" width={80} height={80} alt='logo' /> 
         <ul className='hidden md:flex gap-6'>
             <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer1 ${path=='/dashboard'&&'text-primary font-bold'}`}>Dashboard</li>
             <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer1 ${path=='/dashboard/upgrade'&&'text-primary font-bold'}`}>Upgrade</li>
